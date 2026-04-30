@@ -1,6 +1,6 @@
 import type { ActionBlueprintGraph } from '../types/graph';
 
-const DEFAULT_API_BASE_URL = 'http://localhost:3003';
+const DEFAULT_API_BASE_URL = 'http://localhost:3000';
 const GRAPH_ENDPOINT = '/api/v1/123/actions/blueprints/bp_456/bpv_123/graph';
 
 const getApiBaseUrl = () => {
@@ -16,4 +16,3 @@ export const fetchActionBlueprintGraph = async (): Promise<ActionBlueprintGraph>
 
   return response.json() as Promise<ActionBlueprintGraph>;
 };
-

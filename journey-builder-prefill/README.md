@@ -24,7 +24,7 @@ npm install
 npm start
 ```
 
-In this workspace, the cloned server is running on `http://localhost:3003` and serves:
+In this workspace, the cloned server is running on `http://localhost:3000` and serves:
 
 ```text
 GET /api/v1/123/actions/blueprints/bp_456/bpv_123/graph
@@ -50,7 +50,7 @@ http://localhost:5173
 The API base URL comes from:
 
 ```bash
-VITE_API_BASE_URL=http://localhost:3003
+VITE_API_BASE_URL=http://localhost:3000
 ```
 
 Included `.env.example` with the default value. The full graph endpoint is built in `src/api/graphApi.ts`.
@@ -147,7 +147,7 @@ export const customDataSource: PrefillDataSource = {
 - Uses `node.data.component_id` to find the matching form definition in `graph.forms`.
 - Treats `field_schema.properties` as the source of fields that can be mapped.
 - Saves prefill mappings to browser `localStorage`, not to the mock server.
-- Defaults the app to port `3003` because that is where this cloned mock server is running.
+- Defaults the app to port `3000` because that is where the mock server is expected to run.
 - Locally added forms reuse one of the form schemas returned by the API.
 
 ## Known Limitations
